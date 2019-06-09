@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mcc.dictionary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".application.MyApp"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.mcc.dictionary.activity.MainActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mcc.dictionary.activity.SplashActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mcc.dictionary.activity.FavoriteListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name_favorite"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.mcc.dictionary.activity.HistoryListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name_history"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.mcc.dictionary.activity.AddWordActivity"
+            android:label="@string/title_activity_add_word"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.mcc.dictionary.activity.WordDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/word_detail"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/menu_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
+
+        <!-- disable or remove following block of code to turn off push notification -->
+        <!-- start block -->
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_static_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- end block -->
+
+    </application>
+
+</manifest>

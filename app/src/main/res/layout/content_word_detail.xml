@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mcc.dictionary.activity.WordDetailActivity"
+    tools:showIn="@layout/activity_word_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+     >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@color/color_background"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textLinear"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_text"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                    <TextView
+                        android:id="@+id/textview_word"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/word"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/detail_text_Size"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight=".95"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight=".5">
+
+                            <ImageView
+                                android:id="@+id/voice_icon_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/voice_icon_detail"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/unfavorite_icon_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/unfav_icon_blue" />
+                            <ImageView
+                                android:id="@+id/favorite_icon_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/fav_icon_blue"
+                                android:layout_marginLeft="10dp"
+                                android:visibility="gone"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textview_word_meaning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="32dp"
+                        android:text="@string/word"
+                        android:textColor="@color/color_text"
+                        android:textSize="22sp" />
+
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:orientation="vertical">
+                     <TextView
+                         android:id="@+id/textview_word_type"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="15dp"
+                         android:layout_marginTop="3dp"
+                         android:text="@string/adjective"
+                         android:textColor="@color/color_text"
+                         android:textSize="18sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+
+                         android:layout_marginTop="3dp"
+                         android:paddingTop="20dp"
+                         android:text="@string/synonym"
+                         android:textStyle="bold"
+                         android:textColor="@color/color_text"
+                         android:textSize="18sp" />
+
+
+                     <TextView
+                         android:id="@+id/textview_synonym"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:text="@string/synonym_text"
+                         android:textColor="@color/color_text"
+                         android:textSize="18sp" />
+
+                     <TextView
+                         android:paddingTop="10dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textColor="@color/color_text"
+                         android:layout_marginTop="3dp"
+                         android:text="@string/antonym"
+                         android:textSize="18sp"
+                         android:textStyle="bold"/>
+
+
+                     <TextView
+                         android:id="@+id/textview_antonym"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:textColor="@color/color_text"
+                         android:text="@string/antonym_text"
+                         android:textSize="18sp" />
+
+                     <TextView
+                         android:paddingTop="10dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textColor="@color/color_text"
+                         android:layout_marginTop="3dp"
+                         android:text="@string/example"
+                         android:textSize="18sp"
+                         android:textStyle="bold"/>
+
+
+                     <TextView
+                         android:id="@+id/textview_example"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="32dp"
+                         android:textColor="@color/color_text"
+                         android:text="@string/example_text"
+                         android:textSize="18sp"
+                         />
+
+                 </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
